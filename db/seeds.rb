@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+@teams_list = HTTParty.get("http://api.sportsdatallc.org/nba-t3/league/hierarchy.json?api_key=#{ENV['API_KEY']}")
+
+@conf = @teams_list.parsed_response['conferences']
+
+@conf.each do |conf|
+	conf['divisions'].each do |division|
+		division['teams'].each do |team|
+			Team.create(name: team['name'], team_id: team['id'])
+		end 
+	end
+
+
+	
+
+end 
