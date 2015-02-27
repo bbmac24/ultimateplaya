@@ -1,4 +1,40 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Pick Your Starting Five! </h1>
 
-{{4 + 10}}
+
+<div ng-hide="vm.players.length == 5">
+
+  <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId">
+    <option>-- Select a Team --</option>
+    <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
+  </select>
+
+
+  <select ng-change="vm.selectedPlayer()" ng-model="vm.selectedPlayerId">
+    <option ng-repeat="player in vm.roster" value="{{player.id}}">{{player.player_name}}</option>
+  </select> 
+
+</div>
+
+<!-- <div ng-show="vm.players.length == 5">  -->
+
+
+
+
+
+<p>Selected Team</p>
+
+
+<!-- <br>
+<img ng-src="{{vm.selectedTeam}}">  -->
+
+<!-- <h2>Roster</h2>
+<p>{{vm.players}}</p> -->
+<div ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
+  <img ng-src="{{ team.image_url }} ">
+</div> 
+
+<div ng-repeat="player in vm.players"> 
+  {{ player.player_name }} + {{ player.player_position }} {{ player.team.image_url }}
+</div> 
+
+
