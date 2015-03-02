@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 	get "/api/roster" => 'data#roster' 
   get "/api/player" => 'data#player'
 
+  get "/signup" => 'users#new', as: :signup  
+  # resources :users
+  post '/users' => 'users#create', as: :users
+
 end

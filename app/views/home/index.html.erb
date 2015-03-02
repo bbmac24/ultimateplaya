@@ -1,5 +1,13 @@
 <h1>Pick Your Starting Five! </h1>
 
+<h2>Login</h2>
+
+<%= form_for :user, url: '/root' do |f| %>
+  <%= f.text_field :username, placeholder: 'Username' %>
+  <%= f.password_field :password, placeholder: 'Password' %>
+  <%= f.submit 'Login' %>
+<% end %>
+
 
 <div ng-hide="vm.players.length == 5">
 
@@ -15,13 +23,9 @@
 
 </div>
 
-<!-- <div ng-show="vm.players.length == 5">  -->
-
-
-
-
-
 <p>Selected Team</p>
+
+<%= link_to "Signup", signup_path %>
 
 
 <!-- <br>
@@ -29,12 +33,13 @@
 
 <!-- <h2>Roster</h2>
 <p>{{vm.players}}</p> -->
+
 <div ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
-  <img ng-src="{{ team.image_url }} ">
+  <img ng-hide="vm.players.length == 5" style="width:169px;" ng-src="{{ team.image_url }} ">
 </div> 
 
 <div ng-repeat="player in vm.players"> 
-  {{ player.player_name }} + {{ player.player_position }} {{ player.team.image_url }}
+  {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
 </div> 
 
 

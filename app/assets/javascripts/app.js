@@ -19,8 +19,6 @@ angular.module("app", [])
       $http.get("/api/player?id=" + vm.selectedPlayerId).then(function(player){
         vm.players.push(player.data)
       });
-
-      // vm.playerselected = true;
     }
 
     vm.players = []
