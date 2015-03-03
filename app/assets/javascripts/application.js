@@ -17,5 +17,6 @@
 //= require angular-resource
 
 //= require plugins/parallax
+//= require plugins/smooth-scrolling
 //= require_tree .
 

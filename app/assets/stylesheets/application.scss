@@ -1,17 +1,86 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
-
- */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1 {
+  font-family: graduate, cursive; 
+}
+
+h2 {
+  font-family: graduate, cursive; 
+}
+
+// body {
+//   background: peachpuff; 
+// }
+
+.main-nav {
+  background: #fff;
+  height: 80px;
+  z-index: 150;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.nav {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(#6D9F94,.8);
+  box-shadow: 0 0 2px rgba(#000,.8);
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+  text-align: center;
+  word-spacing: .5em;
+}
+li {
+  list-style: none;
+  display: inline-block;
+  a {
+    display: inline-block;
+    padding: 1em .1em;
+    color: #EFEFBF;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px #215D6E;
+  }
+}
+
+
+.parallax-window {
+    min-height: 700px;
+    width: 100%; 
+    height: 100%; 
+
+    background: transparent;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    z-index: 11; 
+
+}
+
+.cover {
+  width: 100%; 
+  height: 400px; 
+/*  background-color: white; */
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.jeremylin {
+  background-color: black;
+  background: url("http://24.media.tumblr.com/tumblr_lzmp6jSDRi1qcky4ko3_400.gif");
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-color: #EFEFEF;
+  opacity: 0.5;
+  width: 500px;
+  height: 500px;
+  z-index: 11; 
+}
 

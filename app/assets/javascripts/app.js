@@ -22,6 +22,10 @@ angular.module("app", [])
     }
 
     vm.players = []
+
+    vm.resetplayers = function () {
+      vm.players = []
+    }
   
   }]); 
 
