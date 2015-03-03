@@ -1,13 +1,11 @@
-<h1>Pick Your Starting Five! </h1>
+
+<% if current_user  %>
+<%= current_user.username  %>
 
 <h2>Login</h2>
 
-<%= form_for :user, url: '/root' do |f| %>
-  <%= f.text_field :username, placeholder: 'Username' %>
-  <%= f.password_field :password, placeholder: 'Password' %>
-  <%= f.submit 'Login' %>
-<% end %>
 
+<h1>Pick Your Starting Five! </h1>
 
 <div ng-hide="vm.players.length == 5">
 
@@ -25,14 +23,6 @@
 
 <p>Selected Team</p>
 
-<%= link_to "Signup", signup_path %>
-
-
-<!-- <br>
-<img ng-src="{{vm.selectedTeam}}">  -->
-
-<!-- <h2>Roster</h2>
-<p>{{vm.players}}</p> -->
 
 <div ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
   <img ng-hide="vm.players.length == 5" style="width:169px;" ng-src="{{ team.image_url }} ">
@@ -41,5 +31,32 @@
 <div ng-repeat="player in vm.players"> 
   {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
 </div> 
+
+<%= link_to "LOGOUT", logout_path %>
+
+
+
+
+
+
+
+
+
+
+<% else %>
+
+<h2>Login</h2>
+
+
+<%= form_for :user, url: '/login' do |f| %>
+  <%= f.text_field :username, placeholder: 'Username' %>
+  <%= f.password_field :password, placeholder: 'Password' %>
+  <%= f.submit 'Login' %>
+<% end %>
+
+<%= link_to "Signup", signup_path %>
+
+
+<% end %>
 
 
