@@ -1,96 +1,135 @@
 
-     <nav class="main-nav">
-          <a href="#">Nav Link 1</a>
-          <a href="#">Nav Link 2</a>
-          <a href="#">Nav Link 3</a>
-          <a data-scroll data-options='{ "speed": 3000, "easing": "easeInOutQuad" }' href="#bazinga">Quad</a>
-          <%= link_to "LOGOUT", logout_path %>
-        </nav>
-      </p> 
-      <br> 
+<header> 
+    <h1>YOU GOT WHAT IT TAKES TO BE A PLAYA HATER!? </h1>
+    <p>Creating one of these isn't so bad. Let's learn how with this sweet little demo!</p>
+
+</header> 
+
+    <nav class="main-nav"> 
+      <div class="container-fluid navpadding">
+
+        <div id="leftnav"> 
+          <ul class="list-inline"> 
+             <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#about">about</a></li> 
+
+              <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#startingfive">starting-five</a></li> 
+        </div> 
+      
+        <div id="rightnav">
+           <% if current_user  %>
+            <%= current_user.username  %> <%= link_to "LOGOUT", logout_path %>
+
+            <% else %>
+
+            <%= form_for :user, url: '/login' do |f| %>
+        
+              <li>  <%= f.text_field :username, placeholder: 'username',class: 'form-control' %> </li> 
+              <li> <%= f.password_field :password, placeholder: 'password', class: 'form-control'%> </li> 
+              <li> <%= f.submit 'LOGIN', class: 'btn btn-primary' %></li> 
+            <% end %>
+          <% end %>
+        </div> 
+
+      </div> 
+    </nav>
+
+  <div class="main"> 
+    <div id="about"> 
+     <h1> EVER WONDER HOW YOU CAN BULID YOUR OWN FANTASY TEAM? </h1> 
+     <BR> 
+       <p> NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
+          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
+            A;LSKFJDSA;KFJ DSA;KF JDSFDS
+            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
+            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
+            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
+            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F</p> 
+
+        <%= link_to "Signup", signup_path %>
+  </div> 
+  <div id="startingfive"> 
+    <% if current_user %>
+        <h1>Pick Your Starting Five! </h1>
+              <div ng-hide="vm.players.length == 5">
+
+          <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId">
+          <option>-- Select a Team --</option>
+          <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
+        
+        </select>
+          <select ng-change="vm.selectedPlayer()" ng-model="vm.selectedPlayerId">
+          <option ng-repeat="player in vm.roster" value="{{player.id}}">{{player.player_name}}</option>
+        </select> 
+  </div>
 
 
-    <div class="parallax-window text-center" data-parallax="scroll" data-image-ng-src="retina1.jpg" data-position-X="right"> 
-    <h1>Hello World</h1>
-    <div class="jeremylin"></div>
-    
-
-    </div>
-
-    <div class="cover"> </div> 
-
-
-
-    <div class="parallax-window text-center" data-parallax="scroll" data-image-src="../images/retina2.jpg">
-   
-
-    </div>
-
-
-
-<% if current_user  %>
-<%= current_user.username  %> 
-
-
-<h2>Login</h2>
-
-
-<h1>Pick Your Starting Five! </h1>
-
-<div ng-hide="vm.players.length == 5">
-
-  <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId">
-    <option>-- Select a Team --</option>
-    <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
-  </select>
-
-
-  <select ng-change="vm.selectedPlayer()" ng-model="vm.selectedPlayerId">
-    <option ng-repeat="player in vm.roster" value="{{player.id}}">{{player.player_name}}</option>
-  </select> 
-
-</div>
-
-
-<div ng-show="vm.players.length == 5"> 
-  <button ng-click="vm.resetplayers()" type="button" class="btn btn-info">RESET</button> 
-
-</div> 
+  <div ng-show="vm.players.length == 5"> 
+     <button ng-click="vm.resetplayers()" type="button" class="btn btn-info">RESET</button> 
+  </div> 
 
 <p>Selected Team</p>
 
+    <div ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
+      <img ng-hide="vm.players.length == 5" style="width:169px;" ng-src="{{ team.image_url }} ">
+    </div> 
 
-<div ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
-  <img ng-hide="vm.players.length == 5" style="width:169px;" ng-src="{{ team.image_url }} ">
-</div> 
+    <div ng-repeat="player in vm.players"> 
+      {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
+    </div> 
 
-<div ng-repeat="player in vm.players"> 
-  {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
-</div> 
-
-<%= link_to "LOGOUT", logout_path %>
-
-
-<% else %>
-
-<h2>Login</h2>
-
-
-<%= form_for :user, url: '/login' do |f| %>
-  <%= f.text_field :username, placeholder: 'Username' %>
-  <%= f.password_field :password, placeholder: 'Password' %>
-  <%= f.submit 'Login' %>
-<% end %>
-
-<%= link_to "Signup", signup_path %>
-
+  </div>
 
 <% end %>
-
-<br>
-
-<hr> 
-
-<div id="bazinga">scroll here></div> 
-
-

@@ -11,10 +11,6 @@
 	end
 end 
 
-
-
-# p Team.all.count
-
 #to loop the information
 Team.all.each do |team|
 
@@ -27,7 +23,7 @@ Team.all.each do |team|
 	end
 end 
 
-
+#All Teams
 Team.find_by(name: "Heat").update_attributes(image_url:"http://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Miami_Heat_logo.svg/741px-Miami_Heat_logo.svg.png")
 Team.find_by(name: "Hawks").update_attributes(image_url:"http://s7d2.scene7.com/is/image/Fathead/lgo_nba_atlanta_hawks?layer=comp&fit=constrain&hei=310&wid=310&fmt=png-alpha&qlt=75,0&op_sharpen=1&resMode=bicub&op_usm=0.0,0.0,0,0&iccEmbed=0")
 Team.find_by(name: "Lakers").update_attributes(image_url:"http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/lal.png")
@@ -64,7 +60,7 @@ Team.find_by(name: "Knicks").update_attributes(image_url:"http://s7d2.scene7.com
 Team.find_by(name: "Magic").update_attributes(image_url:"http://vignette3.wikia.nocookie.net/nba/images/1/13/OrlandoMagicLogo.png/revision/latest?cb=20140207173420")
 Team.find_by(name: "Wizards").update_attributes(image_url:"http://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Washington_Wizards_Logo.svg/1111px-Washington_Wizards_Logo.svg.png")
 
-#players
+#Hawks *not all NBA players are imported from this API. 
 Player.find_by(player_name: "Elton Brand").update_attributes(players_image:"http://img.bleacherreport.net/img/images/photos/002/919/767/hi-res-4a43670ca4dbd1f6ed190cd6aeca93bb_crop_north.jpg?w=630&h=420&q=75")
 Player.find_by(player_name: "Paul Millsap").update_attributes(players_image:"http://static.foxsports.com/content/fscom/img/2013/12/31/123113-NBA-Hawks-Paul-Millsap-PI-CH_20131231163718924_660_320.JPG")
 Player.find_by(player_name: "Jeff Teague").update_attributes(players_image:"http://cdn.fansided.com/wp-content/blogs.dir/229/files/2014/01/8084690.jpg")
