@@ -1,7 +1,15 @@
 
 <header> 
-    <h1>YOU GOT WHAT IT TAKES TO BE A PLAYA HATER!? </h1>
-    <p>Creating one of these isn't so bad. Let's learn how with this sweet little demo!</p>
+
+    <h1 class="animated fadeInDown ">YOU GOT WHAT IT TAKES</h1> 
+    <h1 class="animated fadeInDown">TO BE A PLAYA HATER!?</h1> 
+    <h2 class="welcome">welcome to your ..</h2> 
+    
+    <div class="position">  
+      <img class="animated fadeInDown logo" src="<%= asset_path('ultimateplaya.svg') %>" alt="playa"> 
+    </div> 
+
+ 
 
 </header> 
 
@@ -17,7 +25,11 @@
       
         <div id="rightnav">
            <% if current_user  %>
-            <%= current_user.username  %> <%= link_to "LOGOUT", logout_path %>
+           <%= current_user.username  %> <%= link_to "LOGOUT", logout_path %>
+           <script>
+              $(document).ready(function() {
+              smoothScroll.animateScroll( null, "#startingfive", { "speed": 1500, "easing": "easeInOutQuad" } ); 
+            }); </script> 
 
             <% else %>
 
@@ -36,7 +48,7 @@
   <div class="main"> 
     <div id="about"> 
      <h1> EVER WONDER HOW YOU CAN BULID YOUR OWN FANTASY TEAM? </h1> 
-     <BR> 
+     <br> 
        <p> NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
             A;LSKFJDSA;KFJ DSA;KF JDSFDS
             A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
@@ -100,6 +112,7 @@
 
         <%= link_to "Signup", signup_path %>
   </div> 
+
   <div id="startingfive"> 
     <% if current_user %>
         <h1>Pick Your Starting Five! </h1>
@@ -122,14 +135,20 @@
 
 <p>Selected Team</p>
 
-    <div ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
+    <div class="bounceIn" ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
       <img ng-hide="vm.players.length == 5" style="width:169px;" ng-src="{{ team.image_url }} ">
     </div> 
 
-    <div ng-repeat="player in vm.players"> 
+    <div class="bouncIn" ng-repeat="player in vm.players"> 
       {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
     </div> 
-
-  </div>
+</div> 
 
 <% end %>
+
+<footer> 
+
+  <h2>MADE WITH GA</h2> 
+
+
+</footer> 
