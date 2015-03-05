@@ -11,6 +11,74 @@ Copyright (c) 2014 Daniel Eden
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+/*     -webkit-animation-delay: 1000ms;*/
+
+}
+
+.animated1 {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+     -webkit-animation-delay: 1s;
+
+}
+
+.animated2{
+    -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+     -webkit-animation-delay: 2s;
+}
+
+
+.animated3{
+    -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+     -webkit-animation-delay: 2500ms;
+}
+
+.animated4{
+    -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+     -webkit-animation-delay: 3000ms;
+}
+
+.animated5{
+    -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+     -webkit-animation-delay: 3500ms;
+}
+
+.animated6{
+    -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+     -webkit-animation-delay: 4500ms;
+}
+
+.animated7{
+    -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+     -webkit-animation-delay: 5500ms;
+}
+
+.animated8{
+    -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+     -webkit-animation-delay: 6s;
 }
 
 .animated.infinite {
@@ -85,6 +153,9 @@ Copyright (c) 2014 Daniel Eden
   -webkit-transform-origin: center bottom;
       -ms-transform-origin: center bottom;
           transform-origin: center bottom;
+
+
+
 }
 
 @-webkit-keyframes flash {

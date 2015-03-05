@@ -2,44 +2,151 @@
 @import "bootstrap";
 @import "animate.css"; 
 
-$main: white; 
 
+
+// font-family: 'Quicksand', sans-serif;
+// font-family: 'graduate', cursive; 
+
+$main: white; 
+$font: graduate, cursive; 
+$font2: quicksand, sans-serif; 
+$main_yellow: #F9BF3B; 
+
+// .normalink {
+//   color: red; 
+//   text-decoration: none; 
+
+  
+// }
 
 h1 {
   font-family: graduate, cursive; 
-  font-weight: bold; 
+  font-weight: bold;  
   vertical-align: middle; 
-  color: white; 
+  color: $main_yellow;  
   font-size: 40px; 
+  margin-top: -10px; 
+
+  span {
+    color: white; 
+    font-size: 50px; 
+  }
 }
+
 .logo {
-  width: 500px; 
+  width: 430px; 
   position: relative; 
   margin-left: auto; 
   margin-right: auto; 
   clear: both; 
     z-index: 20; 
-    
+}
+// player 1
+#playa1 {
+  position: absolute; 
+  left: 0; 
+  bottom: 120px; 
+  z-index: 300; 
 }
 
+.playa1 {
+  width: 200px; 
+  z-index: 300; 
+
+}
+// player 1
+
+// player 2
+#playa2 {
+  position: absolute; 
+  left: 200px;  
+  bottom: 80px; 
+  z-index: 301; 
+}
+
+.playa2 {
+  width: 180px; 
+}
+// player 2
+
+// player 3
+#playa3 {
+  position: absolute; 
+  right: -5px; 
+  bottom: 180px; 
+  z-index: 4; 
+}
+
+.playa3 {
+  width: 220px; 
+
+}
+// player 3
+
+// player 4
+#playa4 {
+  position: absolute; 
+  right: 170px;  
+  bottom: 100px; 
+  z-index: 300; 
+}
+
+.playa4 {
+ width: 220px; 
+}
+// player 4
+
+// player 5
+#playa5 {
+  position: absolute; 
+  left: -85px; 
+  top: -75px; 
+  z-index: 4; 
+}
+
+.playa5 {
+  width: 230px; 
+  height: 230px; 
+
+}
+// player 5
 
 h2 {
-  font-family: graduate, cursive; 
+  font-family: $font; 
+  color: $main_yellow; 
+
+}
+
+h3 {
+  font-family: $font; 
+  color: $main_yellow; 
+  font-size: 20px; 
+
+  span {
+    color: white; 
+  }
 }
 
 * {
   box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
 }
+
 body {
-  margin: 0; 
-  padding-top: 610px; 
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 530px; 
 
 }
 
 header {
-  height: 660px;
+  height: 580px;
   padding-top: 50px;
-  background: rgb(52, 152, 219);
+  background: rgb(230, 126, 34);
+  background-image: url('/background1.jpg');
+
 }
 
 .main-nav,
@@ -48,63 +155,99 @@ header {
 }
 
 .main-nav {
-  background: green;
+  background: green; 
   height: 80px;
   z-index: 150;
-  padding-top: 15px; 
+  padding: 0; 
   margin-bottom: -80px;
   border-bottom: 10px solid white; 
-  font-family: graduate, cursive; 
-  font-size: 10px; 
+
 
   #leftnav {
-    float: left; 
+    float: left;
+    font-size: 20px; 
+    margin-left: 50px; 
+    margin-bottom: 10px; 
+    font-family: $font; 
+
+      li {
+        list-style: none;
+        display: inline-block;
+
+            a {
+            display: inline-block;
+            padding: 1em .1em;
+            color: $main_yellow; 
+  
+            }
+
+      }       
+
   }
 
   #rightnav {
     float: right; 
+    margin-right: 50px; 
+    margin-top: 20px; 
+    font-family: $font2; 
+    font-size: 20px; 
+    font-weight: bold; 
+    color: $main_yellow; 
+      
+        li {
+        list-style: none;
+        display: inline-block;
+
+          a {
+          display: inline-block;
+          padding: 1em .1em;
+          color: $main_yellow; 
+
+              a:hover {
+                color: white; 
+                font-size: 20px; 
+              }
+          }
+      }
+
+   
+
+
+
   }
 
+}
+
+span#logout {
+  color: white; 
 }
 
 header,
 .main-nav-scrolled {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 0; 
 }
+
 
 .main {
   background: #f2f2e8;
-  padding-top: 110px; 
-
+  padding-top: 100px; 
+  padding-right: 0; 
+  padding-left: 0; 
+  padding-bottom: 0; 
+  margin: 0; 
 }
 
-.nav {
-
-  position: absolute;
-  width: 100%;
-  background-color: rgba(#6D9F94,.8);
-  box-shadow: 0 0 2px rgba(#000,.8);
-  text-align: center; 
-  vertical-align: middle; 
-
+span#ultimate {
+  color: white; 
+  text-shadow: 1px 1px 1px green; 
 }
 
-li {
-  list-style: none;
-  display: inline-block;
-  padding-left: 5px; 
-
-
-  a {
-    display: inline-block;
-    padding: 1em .1em;
-    color: $main; 
-    text-decoration: none;
-    text-shadow: 1px 1px #215D6E;
-  }
+h1#aboutshout {
+  font-size: 20px; 
 }
+
 
 #startingfive {
   background: grey; 
@@ -126,4 +269,3 @@ footer {
   border-bottom: 5px solid black; 
 
 }
-

@@ -1,31 +1,51 @@
 
 <header> 
 
-    <h1 class="animated fadeInDown ">YOU GOT WHAT IT TAKES</h1> 
-    <h1 class="animated fadeInDown">TO BE A PLAYA HATER!?</h1> 
-    <h2 class="welcome">welcome to your ..</h2> 
+    <h1>got what it takes</h1> 
+    <h1 class="animated1 bounceInDown"> to be a <span>REAL PLAYA?</span></h1> 
+    <h2 class="animated6 bounceInDown"> WELCOME TO </h2> 
     
-    <div class="position">  
-      <img class="animated fadeInDown logo" src="<%= asset_path('ultimateplaya.svg') %>" alt="playa"> 
+    <div class="logo">  
+    <img class="animated7 bounceInDown logo" src="<%= asset_path('ultimateplaya.svg') %>" alt="ultimateplayer">  
     </div> 
 
- 
+    <h3 class="animated7 bounceInDown guide"> your <span>#1</span>  guide to <span>NBA fantasy teams</span> </h3> 
+
+    <div id="playa1"> 
+      <img class="animated2 bounceInLeft playa1" src="<%= asset_path('playa1.png') %>"alt="playa1"> 
+    </div> 
+
+    <div id="playa2"> 
+      <img class="animated3 bounceInLeft playa2" src="<%= asset_path('player2.png') %>"alt="playa2"> 
+    </div> 
+
+      <div id="playa3"> 
+      <img class="animated4 bounceInRight playa3" src="<%= asset_path('player4.png') %>"alt="playa3"> 
+    </div> 
+
+      <div id="playa4"> 
+      <img class="animated5 bounceInRight playa4" src="<%= asset_path('player5.png') %>"alt="playa4"> 
+    </div> 
+
 
 </header> 
 
     <nav class="main-nav"> 
-      <div class="container-fluid navpadding">
+     
 
         <div id="leftnav"> 
           <ul class="list-inline"> 
              <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#about">about</a></li> 
+             <li> &nbsp; &nbsp; &nbsp; </li> 
 
               <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#startingfive">starting-five</a></li> 
         </div> 
       
         <div id="rightnav">
            <% if current_user  %>
-           <%= current_user.username  %> <%= link_to "LOGOUT", logout_path %>
+           <%= current_user.username  %> 
+
+           <span id="logout"><%= link_to "LOGOUT", logout_path, class: 'normalink' %></span> 
            <script>
               $(document).ready(function() {
               smoothScroll.animateScroll( null, "#startingfive", { "speed": 1500, "easing": "easeInOutQuad" } ); 
@@ -35,82 +55,30 @@
 
             <%= form_for :user, url: '/login' do |f| %>
         
-              <li>  <%= f.text_field :username, placeholder: 'username',class: 'form-control' %> </li> 
+              <li class="signin">  <%= f.text_field :username, placeholder: 'username',class: 'form-control' %> </li> 
               <li> <%= f.password_field :password, placeholder: 'password', class: 'form-control'%> </li> 
               <li> <%= f.submit 'LOGIN', class: 'btn btn-primary' %></li> 
             <% end %>
           <% end %>
         </div> 
 
-      </div> 
+
     </nav>
 
-  <div class="main"> 
-    <div id="about"> 
-     <h1> EVER WONDER HOW YOU CAN BULID YOUR OWN FANTASY TEAM? </h1> 
-     <br> 
-       <p> NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F
-          NOW YOU CAN WITH THIS APP A;LKDSJFDS;KALFJKLDS;AJF DS;AF
-            A;LSKFJDSA;KFJ DSA;KF JDSFDS
-            A;LKDJF D;ASKLFJ KDLSA;FJDKL;SJFKLDSAJFAS
-            ;LADJKSF;LD SJFKDASJF;DSA FDSALKJF
-            ;LAJKSF ;LSDAFJDKSLJFKLDS;FJ S
-            ;LKAJDF;LKDJ F;DASJ FDSKALJF SKJF SKL;F</p> 
+<div class="main"> 
 
-        <%= link_to "Signup", signup_path %>
+    <div id="about"> 
+      <div class="row"> 
+        <div class="col-md-2"></div> 
+          <div class="col-md-8"> 
+            <br> <br> 
+              <h1 id="aboutshout"> what can <span id="ultimate"> UltimatePlayers </span>  do for you? </h1> 
+                <p> Do you enjoy playing the NBA Fantasy League?  This app lets you choose your NBA players and form your fantasy team. The app will receive live updated stats on your selected players during the NBA playoffs. It calculates live stats and see your best starting five players on any given day. It's a fast and easy way to see all your fantasy players in one place. 
+                </p> 
+              <h2> Signup to get started! </h2>  <%= link_to "Signup", signup_path %>
+          </div> 
+        <div class="col-md-2"></div> 
+    </div> 
   </div> 
 
   <div id="startingfive"> 
