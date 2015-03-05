@@ -35,17 +35,21 @@
 
         <div id="leftnav"> 
           <ul class="list-inline"> 
-             <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#about">about</a></li> 
+             <li><a data-scroll data-options='{ "speed": 1800, "easing": "easeInOutQuad" }' href="#about">ABOUT</a></li> 
+
              <li> &nbsp; &nbsp; &nbsp; </li> 
 
-              <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#startingfive">starting-five</a></li> 
+              <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#startingfive">STARTING-FIVE</a></li> 
+            </ul> 
         </div> 
       
         <div id="rightnav">
-           <% if current_user  %>
-           <%= current_user.username  %> 
+            <% if current_user  %>
+           <span id="currentuser"><%= current_user.username %></span> 
 
-           <span id="logout"><%= link_to "LOGOUT", logout_path, class: 'normalink' %></span> 
+           &nbsp; &nbsp; 
+
+           <%= link_to "LOGOUT", logout_path, class: 'normalink' %>
            <script>
               $(document).ready(function() {
               smoothScroll.animateScroll( null, "#startingfive", { "speed": 1500, "easing": "easeInOutQuad" } ); 
@@ -64,59 +68,88 @@
 
 
     </nav>
+<div id="about"> 
+  <div class="main"> 
 
-<div class="main"> 
-
-    <div id="about"> 
-      <div class="row"> 
+      <div class="about row"> 
         <div class="col-md-2"></div> 
           <div class="col-md-8"> 
-            <br> <br> 
-              <h1 id="aboutshout"> what can <span id="ultimate"> UltimatePlayers </span>  do for you? </h1> 
-                <p> Do you enjoy playing the NBA Fantasy League?  This app lets you choose your NBA players and form your fantasy team. The app will receive live updated stats on your selected players during the NBA playoffs. It calculates live stats and see your best starting five players on any given day. It's a fast and easy way to see all your fantasy players in one place. 
-                </p> 
-              <h2> Signup to get started! </h2>  <%= link_to "Signup", signup_path %>
+            <br> 
+            <div class="aboutcontainer text-center"> 
+                <br><br> 
+                <h1 id="aboutshout"> what can 
+
+                     <img id="ultimate" src="<%= asset_path('ultimateplaya.svg') %>" alt="ultimateplayer">  
+
+                  do for you? </h1> 
+                  <hr id="dashed"> 
+
+                  <p class="aboutext"> Do you play NBA Fantasy League?  This app lets you choose your NBA players and form your fantasy team according to their live stats. The app will receive live updated stats on your selected players during the NBA season. It calculates live stats and put your  starting five players and compare with other possible five. The app is designed to provide you with the best possible starting five players for your fantasy team. 
+                  It's a fast and easy way to manage all your NBA stats all in one place. 
+                  </p> 
+
+               <p class="aboutsignup"> <%= link_to "signup", signup_path, class: 'aboutsignup'  %> & get started!</p> 
+            </div> 
           </div> 
         <div class="col-md-2"></div> 
-    </div> 
-  </div> 
+      </div> 
 
+<!-- starting - five play mechanic 
+       -->
   <div id="startingfive"> 
-    <% if current_user %>
-        <h1>Pick Your Starting Five! </h1>
-              <div ng-hide="vm.players.length == 5">
+    <br> 
+    <div class="startingfive row">
+    
 
-          <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId">
-          <option>-- Select a Team --</option>
-          <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
+       <% if current_user %>
+       <br><br> 
+         <h4>Pick - Your - Starting - Five! </h4> 
+           
+                  <div ng-hide="vm.players.length == 5">
+              
+
+                  <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId">
+                  <option>-- Select a Team --</option>
+                  <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
+                
+                  </select>
         
-        </select>
-          <select ng-change="vm.selectedPlayer()" ng-model="vm.selectedPlayerId">
-          <option ng-repeat="player in vm.roster" value="{{player.id}}">{{player.player_name}}</option>
-        </select> 
-  </div>
 
+                  <select ng-change="vm.selectedPlayer()" ng-model="vm.selectedPlayerId">
 
-  <div ng-show="vm.players.length == 5"> 
-     <button ng-click="vm.resetplayers()" type="button" class="btn btn-info">RESET</button> 
-  </div> 
+                              <p id="selected">Selected Team</p>
 
-<p>Selected Team</p>
+                  <ul class="col-md-5">
+  
+                  
+                  <li> <option ng-repeat="player in vm.roster" value="{{player.id}}">{{player.player_name}}</option>
+                </select> </li> 
 
-    <div class="bounceIn" ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
+              </div> 
+
+     <div class="animated bounceIn" ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
       <img ng-hide="vm.players.length == 5" style="width:169px;" ng-src="{{ team.image_url }} ">
+     </div> 
+
+    <div class="animated bounceIn" ng-repeat="player in vm.players"> 
+       {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
     </div> 
 
-    <div class="bouncIn" ng-repeat="player in vm.players"> 
-      {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
-    </div> 
+    <% end %>
+
+
+
+          <div ng-show="vm.players.length == 5"> 
+            <button ng-click="vm.resetplayers()" type="button" class="btn btn-info">RESET</button> <span class="glyphicon glyphicon-sound-5-1" aria-hidden="true">
+          </div> 
+  </div> 
 </div> 
 
-<% end %>
 
 <footer> 
 
-  <h2>MADE WITH GA</h2> 
+
 
 
 </footer> 
+
