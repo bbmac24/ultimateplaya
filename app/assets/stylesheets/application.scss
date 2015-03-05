@@ -162,7 +162,6 @@ header {
   background: green; 
   height: 80px;
   z-index: 150;
-  padding: 0; 
   margin-bottom: -80px;
   border-bottom: 10px solid $main_yellow; 
 
@@ -337,12 +336,6 @@ p#selected {
   color: $main_yellow; 
   font-size: 20px; 
 }
-
-
-
-
-
-
 
 footer {
 
