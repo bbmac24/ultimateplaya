@@ -346,12 +346,23 @@ p#selected {
 
 footer {
 
+  padding-top: 10px; 
+  padding-bottom: auto; 
   height: 50px;
   width: 100%; 
   z-index: 150; 
+  font-family: $font2; 
+  color: $main_yellow; 
   text-align: center;
   position: absolute; 
   bottom: 0; 
   background-color: green; 
+  border-top: 10px solid $main_yellow; 
+
+    span {
+      color: white; 
+      float: right; 
+      margin-right: 30px; 
+    }
 
 }

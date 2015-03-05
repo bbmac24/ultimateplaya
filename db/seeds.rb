@@ -69,6 +69,16 @@ Player.find_by(player_name: "Kyle Korver").update_attributes(players_image:"http
 Player.find_by(player_name: "Thabo Sefolosha").update_attributes(players_image:"http://cache2.asset-cache.net/gc/456460224-thabo-sefolosha-of-the-atlanta-hawks-poses-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=GkZZ8bf5zL1ZiijUmxa7QWp4rzIamDwYvIcbxUQVBr8E6o3n71aIi%2FfxDOqteqfFjZKhqIf6%2BbEqTjgRSBqk3ZK9IFBhVuLjFPm6gQUzYXSrip9iK8lEyUa7er9uBTBS")
 
 
+Player.find_by(player_name: "Jeremy Lin").update_attributes(players_image:"http://img.bleacherreport.net/img/slides/photos/003/804/930/hi-res-aab46e197f0a0849e8f5bff674b2ee9a_crop_north.jpg?w=630&h=420&q=75")
+Player.find_by(player_name: "Steve Nash").update_attributes(players_image:"http://usatftw.files.wordpress.com/2014/03/usatsi_7731182.jpg?w=1000&h=750")
+Player.find_by(player_name: "Kobe Bryant").update_attributes(players_image:"http://static3.businessinsider.com/image/52a5eb2269beddf778312cfc/kobe-bryant-returns-with-a-classic-quote-about-his-injury-hiatus.jpg")
+Player.find_by(player_name: "Jordan Hill").update_attributes(players_image:"http://www.nba.com/media/act_jordan_hill.jpg")
+Player.find_by(player_name: "Nick Young").update_attributes(players_image:"http://cdn.na16.netdna-cdn.com/wp-content/uploads/2014/05/nick-young-swaggy-p.jpg")
+Player.find_by(player_name: "Julius Randle").update_attributes(players_image:"http://media.kentucky.com/smedia/2014/10/29/09/22/16eP8L.AuSt.79.jpg")
+Player.find_by(player_name: "Robert Sacre").update_attributes(players_image:"http://ballislife.com/wp-content/uploads/2012/11/ts_120907robertsacre670.jpg")
+Player.find_by(player_name: "Wesley Johnson").update_attributes(players_image:"http://www3.pictures.zimbio.com/gi/Wesley+Johnson+Minnesota+Timberwolves+v+Los+Do2FlE19lAvl.jpg")
+
+
 
 
 
