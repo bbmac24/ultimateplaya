@@ -8,5 +8,8 @@ def current_user
 end
 helper_method :current_user
 
+config.relative_url_root = ""
+
 
 end
+
