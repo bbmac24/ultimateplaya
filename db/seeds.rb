@@ -4,23 +4,30 @@
 @conf = @teams_list.parsed_response['conferences']
 
 @conf.each do |conf|
-	conf['divisions'].each do |division|
-		division['teams'].each do |team|
-			Team.create(name: team['name'], team_id: team['id'])
-		end 
-	end
+  conf['divisions'].each do |division|
+    division['teams'].each do |team|
+      Team.create(name: team['name'], team_id: team['id'])
+    end 
+  end
 end 
 
 #to loop the information
 Team.all.each do |team|
 
-	team_data = HTTParty.get("http://api.sportsdatallc.org/nba-t3/teams/#{team.team_id}/profile.json?api_key=#{ENV['API_KEY']}")
+  p "Grabbing players for #{team['name']}}"
 
-	if team_data['players']
-		team_data['players'].each do |player|
-		  Player.create(player_name: player['full_name'], player_position: player['primary_position'], team: team)
-		end
-	end
+  team_data = HTTParty.get("http://api.sportsdatallc.org/nba-t3/teams/#{team.team_id}/profile.json?api_key=#{ENV['API_KEY']}")
+
+  if team_data['players'].present?
+    team_data['players'].each do |player|
+
+      p player['full_name']
+
+      Player.create(player_name: player['full_name'], player_position: player['primary_position'], team: team)
+    end
+  end
+
+  sleep 1
 end 
 
 #All Teams

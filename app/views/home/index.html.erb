@@ -135,7 +135,7 @@
 
                 <div class="animated bounceIn" ng-repeat="player in vm.players"> 
                      {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
-                </div> 
+                </div>  
                 <% end %>
 
                 <div ng-show="vm.players.length == 5"> 
@@ -150,6 +150,12 @@
 
  <span> Powered by SPORTSDATA API </span> 
  <span> Ultimate Players © </span> 
+ <span class="icon"> 
+   <ul> 
+    <li id="linkedin"><a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"></a></li> 
+    <li id="facebook"><a href="https://www.facebook.com/ben.sam.370"></a></li> 
+    <li id="github"><a href="https://github.com/bbmac24"></a></li> 
+  </ul> 
 
 
 </footer> 

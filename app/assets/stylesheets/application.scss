@@ -351,3 +351,17 @@ footer {
     }
 
 }
+
+.icon {
+
+  float: left; 
+
+  li#linkedin {
+    width: 30px; 
+    background-image: url('/LinkedIn_Icon.png');
+    background-size: 50px 50px;  
+  }
+  li#facebook {
+    width: 30px;
+  }
+}
