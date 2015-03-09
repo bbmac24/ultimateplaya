@@ -1,4 +1,5 @@
 
+
 <header> 
 
     <h1>got what it takes</h1> 
@@ -70,16 +71,16 @@
     </nav>
 
 
-<div id="about"> 
+<div class="main"> 
 
-<!-- about page  -->
-        <div class="main"> 
-            <div class="about row"> 
-              <div class="col-md-2"></div> 
-                <div class="col-md-8"> 
-                  <br> <br> 
-                    <div class="aboutcontainer text-center"> 
-                      <br><br> 
+    <div id="about"> 
+      <div class="container-fluid">
+        <div class="about row"> 
+          <div class="col-md-2"></div> 
+            <div class="col-md-8"> 
+              <br> <br> 
+                <div class="aboutcontainer text-center"> 
+                    <br><br> 
                       <h1 id="aboutshout"> what can 
 
                            <img id="ultimate" src="<%= asset_path('ultimateplaya.svg') %>" alt="ultimateplayer">  
@@ -91,27 +92,23 @@
                         It's a fast and easy way to manage all your NBA stats all in one place. 
                         </p> 
 
-                     <p class="aboutsignup"> <%= link_to "signup", signup_path, class: 'aboutsignup'  %> & get started!</p> 
-
-                  </div> 
+                     <p class="aboutsignup"> <%= link_to "signup", signup_path, class: 'aboutsignup'  %> & get started!</p>
                 </div> 
-              <div class="col-md-2"></div> 
             </div> 
-<!-- about section  -->
+          </div> 
+        </div>
+    </div>   
 
 
-<!-- starting - five play mechanic 
-       -->
-        <div id="startingfive"> 
-          <br> 
-            <div class="startingfive row">
-              <% if current_user %>
-                <br><br> 
-                  <h4>Pick - Your - Starting - Five! </h4> 
-                    <div ng-hide="vm.players.length == 5">
+  <div id="startingfive"> 
+      <div class="startingfive">
+        <% if current_user %>
+          <br><br> 
+            <h4>Pick - Your - Starting - Five! </h4> 
                     
-
-                        <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId"> 
+              <div ng-hide="vm.players.length == 5">
+                    
+                <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId"> 
                         <option value="">--Select A Team--</option>
                         <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
                         </select>
@@ -127,7 +124,7 @@
                         <li> <option ng-repeat="player in vm.roster" value="{{player.id}}">{{player.player_name}}</option>
                         </select> </li> 
 
-                  </div> 
+              </div> 
 
                  <div class="animated bounceIn" ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
                   <img ng-hide="vm.players.length == 5" style="width:169px;" ng-src="{{ team.image_url }} ">
@@ -141,27 +138,33 @@
                 <div ng-show="vm.players.length == 5"> 
                   <button ng-click="vm.resetplayers()" type="button" class="btn btn-info">RESET</button> <span class="glyphicon glyphicon-sound-5-1" aria-hidden="true">
                 </div> 
-          </div> 
+          </div>
+        </div>  
       </div> 
 
 
 
-<footer class="row text-center attr-footer"> 
-  
-  <div class="left-side"> 
-    WDI Project 4 - Created by: BenSam 
 
-      <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
 
-      <a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"><img src="/linkedin.png" class="linkedin"></a>
+  <footer class="row text-center attr-footer"> 
 
-      <a href="https://github.com/bbmac24"><img src="githubicon.png" class="github"></a>
-  </div> 
+    <div class="left-side"> 
+      WDI Project 4 - Created by: BenSam 
 
-  <div class="right-side"> 
-    powered by: &nbsp; 
+        <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
 
-      <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
-  </div> 
+        <a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"><img src="/linkedin.png" class="linkedin"></a>
 
-</footer> 
+        <a href="https://github.com/bbmac24"><img src="githubicon.png" class="github"></a>
+    </div> 
+
+    <div class="right-side"> 
+
+      powered by: &nbsp; 
+
+        <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
+    </div> 
+
+  </footer> 
+
+</div>  

@@ -12,26 +12,35 @@ $main_yellow: #F9BF3B;
 
 * {
   box-sizing: border-box; 
-  padding: 0;
-  margin: 0;
+
 }
 
 body {
-
   margin: 0;
   padding-top: 530px; 
+
 
 }
 
 header {
   height: 580px;
   padding-top: 50px;
-  background-image: url('/background1.jpg');
+  background: #f07057;
+  // background-image: url('/background1.jpg');
+  // background-size: 100%; 
 }
 
 .main-nav,
 .main {
   position: relative; 
+}
+
+.main-nav {
+  background: #fff;
+  height: 80px;
+  z-index: 150;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
 
 header,
@@ -40,6 +49,7 @@ header,
   width: 100%;
   top: 0; 
 }
+
 .main {
   background: #f2f2e8;
   padding-top: 100px; 
@@ -52,7 +62,7 @@ header,
   height: 80px;
   z-index: 150;
   margin-bottom: -80px;
-  border-bottom: 10px solid $main_yellow; 
+  border-bottom: 10px solid $main_yellow;
 
 
   #leftnav {
@@ -242,7 +252,6 @@ span#ultimate {
 }
 
 .about {
-  
   margin-top: -20px; 
   padding-top: 20px; 
   background: url("basketballcourt.jpg");
@@ -262,17 +271,14 @@ span#ultimate {
     border-radius: 30px; 
     border: 5px solid $main_yellow; 
 
-    hr#dashed {
-
-      border: 2px dashed $main_yellow; 
-    }
+      hr#dashed {
+        border: 2px dashed $main_yellow; 
+      }
   }
-
 }
 
 h1#aboutshout {
   font-size: 30px;
-
 }
 
 #ultimate {
@@ -301,10 +307,11 @@ p.aboutext {
 }
 
 .startingfive {
-  background: grey; 
-  height: 550px; 
+  height: 600px; 
   background-image: url('/background1.jpg');
+  background-size: 100%; 
   border-top: 10px solid $main_yellow; 
+  margin-top: -15px; 
 }
 
 h4 {
@@ -329,12 +336,14 @@ p#selected {
 }
 
 .attr-footer {
-  width: 100%; 
+  width: 100%;  
   height: 50px;
   z-index: 150; 
   font-family: $font2; 
   position: absolute; 
-  margin-bottom: 0; 
+  bottom: 0; 
+  right: 0; 
+
   padding-top: 8px; 
   background-color: green; 
   border-top: 10px solid $main_yellow; 
@@ -383,4 +392,3 @@ p#selected {
         }
     }
 }
-
