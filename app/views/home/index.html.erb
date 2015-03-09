@@ -111,8 +111,8 @@
                     <div ng-hide="vm.players.length == 5">
                     
 
-                        <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId">
-                        <option>-- Select a Team --</option>
+                        <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId"> 
+                        <option value="">--Select A Team--</option>
                         <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
                         </select>
               
@@ -146,17 +146,22 @@
 
 
 
-<footer> 
+<footer class="row text-center attr-footer"> 
+  
+  <div class="left-side"> 
+    WDI Project 4 - Created by: BenSam 
 
- <span> Powered by SPORTSDATA API </span> 
- <span> Ultimate Players © </span> 
- <span class="icon"> 
-   <ul> 
-    <li id="linkedin"><a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"></a></li> 
-    <li id="facebook"><a href="https://www.facebook.com/ben.sam.370"></a></li> 
-    <li id="github"><a href="https://github.com/bbmac24"></a></li> 
-  </ul> 
+      <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
 
+      <a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"><img src="/linkedin.png" class="linkedin"></a>
+
+      <a href="https://github.com/bbmac24"><img src="githubicon.png" class="github"></a>
+  </div> 
+
+  <div class="right-side"> 
+    powered by: &nbsp; 
+
+      <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
+  </div> 
 
 </footer> 
-

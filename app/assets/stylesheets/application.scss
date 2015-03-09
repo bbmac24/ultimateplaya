@@ -2,8 +2,6 @@
 @import "bootstrap";
 @import "animate"; 
 
-
-
 // font-family: 'Quicksand', sans-serif;
 // font-family: 'graduate', cursive; 
 
@@ -330,38 +328,59 @@ p#selected {
   font-size: 20px; 
 }
 
-footer {
-
-  padding-top: 10px; 
-  height: 50px;
+.attr-footer {
   width: 100%; 
+  height: 50px;
   z-index: 150; 
   font-family: $font2; 
-  color: $main_yellow; 
   position: absolute; 
-  bottom: 0; 
+  margin-bottom: 0; 
+  padding-top: 8px; 
   background-color: green; 
   border-top: 10px solid $main_yellow; 
 
-    span {
+    div.left-side {
       color: white; 
-      float: right; 
-      margin-right: 30px; 
       font-size: 13px; 
+      float: left;
+      padding-left: 50px;  
+
+        a {
+          display: inline-block;
+          padding-left: 3px; 
+          padding-right: 3px; 
+
+            img.facebook {
+              width: 15px;
+            }
+
+            img.linkedin {
+              width: 15px; 
+            }
+
+            img.github {
+              width: 15px; 
+            }
+        }
     }
 
+    div.right-side {
+      color: white;
+      font-size: 13px; 
+      float: right;
+      padding-right: 50px; 
+      vertical-align: middle; 
+
+        a {
+          display: inline-block; 
+          padding-left: 3px; 
+          padding-right: 3px; 
+
+            img.sportsdata {
+              width: 22px;
+
+            }
+        }
+    }
 }
 
-.icon {
-
-  float: left; 
-
-  li#linkedin {
-    width: 30px; 
-    background-image: url('/LinkedIn_Icon.png');
-    background-size: 50px 50px;  
-  }
-  li#facebook {
-    width: 30px;
-  }
-}
