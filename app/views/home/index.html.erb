@@ -101,52 +101,68 @@
 
 
   <div id="startingfive"> 
-      <div class="startingfive">
-        <% if current_user %>
-          <br><br> 
-            <h4>Pick - Your - Starting - Five! </h4> 
+    <br> <br> <br> 
+    <div class="container-fluid"> 
+      <div class="startingfive row">
+        <div class="col-md-2">
+          
+           <% if current_user %>
+             <br><br> 
+            <h4>Starting Five! </h4> 
+            <br> 
+          
+            <hr id="starting"> 
+              <p id="selected">Pick A Team</p> 
                     
               <div ng-hide="vm.players.length == 5">
-                    
                 <select ng-change="vm.changedTeam()" ng-model="vm.selectedTeamId"> 
-                        <option value="">--Select A Team--</option>
-                        <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
-                        </select>
-              
-                        <select ng-change="vm.selectedPlayer()" ng-model="vm.selectedPlayerId">
+                <option value="">--Select A Team--</option>
+                <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
+                </select>
+                <hr> 
 
-                        <p id="selected">Selected Team</p>
+               <p id="selected">Pick A Player</p> 
+                <select ng-change="vm.selectedPlayer()" ng-model="vm.selectedPlayerId"><option value="">--Select A Player--</option>
+                <option ng-repeat="player in vm.roster" value="{{player.id}}">{{player.player_name}}</option>
+                        </select> 
+              <br>
+              <hr id="starting">
 
-                        
-                        <ul class="col-md-5">
-        
-                        
-                        <li> <option ng-repeat="player in vm.roster" value="{{player.id}}">{{player.player_name}}</option>
-                        </select> </li> 
-
-              </div> 
 
                  <div class="animated bounceIn" ng-repeat="team in vm.teams" ng-show="vm.selectedTeamId == team.id"> 
-                  <img ng-hide="vm.players.length == 5" style="width:169px;" ng-src="{{ team.image_url }} ">
+                  <img ng-hide="vm.players.length == 5" style="width:160px;" ng-src="{{ team.image_url }} ">
                  </div> 
+              </div> 
+        </div> 
 
-                <div class="animated bounceIn" ng-repeat="player in vm.players"> 
-                     {{ player.player_name }} <img style="width:150px;"ng-src="{{ player.players_image }}"> + {{ player.player_position }} <img style="width:200px;"ng-src="{{ player.team.image_url }}">
-                </div>  
-                <% end %>
+        <div class="col-md-10">
+          <div class="col-sm-6">
+            <div class="thumbnail">
+              <div class="animated bounceIn" ng-repeat="player in vm.players"> 
+                      <img style="width:150px;"ng-src="{{ player.players_image }}"><h2>{{ player.player_name }}</h2><h1>{{ player.player_position }}</h1> <img style="width:200px;"ng-src="{{ player.team.image_url }}">
+                      <% end %>
+              </div>
+            </div> 
+          </div>
+        </div>   
+  
 
                 <div ng-show="vm.players.length == 5"> 
                   <button ng-click="vm.resetplayers()" type="button" class="btn btn-info">RESET</button> <span class="glyphicon glyphicon-sound-5-1" aria-hidden="true">
                 </div> 
-          </div>
-        </div>  
-      </div> 
+        </div> 
+
+      </div>
+    </div> 
+  </div> 
+</div>  
 
 
 
 
 
-  <footer class="row text-center attr-footer"> 
+
+  <footer class="text-center attr-footer"> 
 
     <div class="left-side"> 
       WDI Project 4 - Created by: BenSam 
@@ -167,4 +183,3 @@
 
   </footer> 
 
-</div>  
