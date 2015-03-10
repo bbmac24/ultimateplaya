@@ -334,6 +334,58 @@ p#selected {
   font-size: 20px; 
 }
 
+hr#starting {
+  border: 5px dashed $main_yellow; 
+}
+
+ul.gridsystem {
+  list-style-type: none; 
+
+  li.borderthumb {
+    margin-left: 10px; 
+    margin-right: 10px; 
+   
+    div.playersgrid {
+      margin-top: 90px; 
+      width: 150px;
+      height: 400px; 
+      background-color: green; 
+      border-radius: 10px; 
+      border: 5px solid $main_yellow; 
+
+      &:hover {
+       -webkit-box-shadow: -2px 1px 25px -4px rgba(0,0,0,0.75);
+       -moz-box-shadow: -2px 1px 25px -4px rgba(0,0,0,0.75);
+       box-shadow: -2px 1px 25px -4px rgba(0,0,0,0.75);
+      }
+
+      span#player_name {
+      
+        color: white; 
+        font-family: $font;  
+        text-align: justify; 
+        // text-justify: inter-word;
+      }
+
+      span#player_position {
+        font-size: 15px; 
+        color: white; 
+        font-family: $font; 
+      }
+    }
+  }
+}
+
+hr#hrtag {
+  border: 3px dashed $main_yellow; 
+}
+
+
+
+
+
+
+
 footer.attr-footer { 
   height: 50px;
   z-index: 150; 
@@ -355,8 +407,8 @@ footer.attr-footer {
 
         a {
           display: inline-block;
-          padding-left: 3px; 
-          padding-right: 3px; 
+          padding-left: 1px; 
+          padding-right: 1px; 
 
             img.facebook {
               width: 15px;
@@ -392,6 +444,3 @@ footer.attr-footer {
     }
 }
 
-hr#starting {
-  border: 5px dashed $main_yellow; 
-}

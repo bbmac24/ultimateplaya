@@ -119,7 +119,8 @@
                 <option value="">--Select A Team--</option>
                 <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
                 </select>
-                <hr> 
+                <br><br><br> 
+               
 
                <p id="selected">Pick A Player</p> 
                 <select ng-change="vm.selectedPlayer()" ng-model="vm.selectedPlayerId"><option value="">--Select A Player--</option>
@@ -133,23 +134,40 @@
                   <img ng-hide="vm.players.length == 5" style="width:160px;" ng-src="{{ team.image_url }} ">
                  </div> 
               </div> 
-        </div> 
 
-        <div class="col-md-10">
-          <div class="col-sm-6">
-            <div class="thumbnail">
-              <div class="animated bounceIn" ng-repeat="player in vm.players"> 
-                      <img style="width:150px;"ng-src="{{ player.players_image }}"><h2>{{ player.player_name }}</h2><h1>{{ player.player_position }}</h1> <img style="width:200px;"ng-src="{{ player.team.image_url }}">
-                      <% end %>
-              </div>
-            </div> 
-          </div>
-        </div>   
-  
 
                 <div ng-show="vm.players.length == 5"> 
-                  <button ng-click="vm.resetplayers()" type="button" class="btn btn-info">RESET</button> <span class="glyphicon glyphicon-sound-5-1" aria-hidden="true">
+                  <br> 
+                  <br>
+                  <button ng-click="vm.resetplayers()" type="button" class="btn btn-info">RESET</button>
                 </div> 
+
+              <% end %>
+        </div> 
+      <div class="container-fluid">
+        <div class="col-md-10">
+       <!--      <ul class="thumbnail"> -->
+          <ul class="animated bounceIn gridsystem" ng-repeat="player in vm.players"> 
+          
+              <li class="col-xs-2 borderthumb">
+                 <div class="thumbnail playersgrid">
+            
+                    <img ng-src="{{ player.players_image }}" class="img-rounded"><img ng-src="{{ player.team.image_url }}">
+
+                  
+                    <span id="player_name">{{ player.player_name }}</span> 
+                  
+                    <hr id="hrtag">    
+                    <p><span id="player_position">{{ player.player_position }}</span></p> 
+                    
+                 
+
+                  </div>  
+              </li>
+          </ul> 
+        </div>  
+      </div>  
+  
         </div> 
 
       </div>
@@ -165,7 +183,7 @@
   <footer class="text-center attr-footer"> 
 
     <div class="left-side"> 
-      WDI Project 4 - Created by: BenSam 
+      WDI Project 4 - © BenSam, 2015
 
         <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
 
@@ -176,7 +194,7 @@
 
     <div class="right-side"> 
 
-      powered by: &nbsp; 
+      POWERED BY: &nbsp; 
 
         <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
     </div> 
