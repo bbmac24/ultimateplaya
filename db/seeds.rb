@@ -69,6 +69,16 @@ Player.find_by(player_name: "Jeff Teague").update_attributes(players_image:"http
 Player.find_by(player_name: "Al Horford").update_attributes(players_image:"http://i.cdn.turner.com/nba/nba/.element/img/1.0/sect/allstar/profiles/al_horford_300.jpg")
 Player.find_by(player_name: "Kyle Korver").update_attributes(players_image:"http://www.picpicx.com/wp-content/uploads/2014/10/c762227223b94095dd3a2a7fcec12fff.jpg")
 Player.find_by(player_name: "Thabo Sefolosha").update_attributes(players_image:"http://cache2.asset-cache.net/gc/456460224-thabo-sefolosha-of-the-atlanta-hawks-poses-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=GkZZ8bf5zL1ZiijUmxa7QWp4rzIamDwYvIcbxUQVBr8E6o3n71aIi%2FfxDOqteqfFjZKhqIf6%2BbEqTjgRSBqk3ZK9IFBhVuLjFPm6gQUzYXSrip9iK8lEyUa7er9uBTBS")
+Player.find_by(player_name: "Kent Bazemore").update_attributes(players_image:"http://static01.nyt.com/images/2015/01/12/sports/NBA/NBA-articleLarge.jpg")
+Player.find_by(player_name: "Pero Antic").update_attributes(players_image:"http://i.kinja-img.com/gawker-media/image/upload/s--pA6qAW_r--/rfw8megcpakhh33v2qtu.jpg")
+Player.find_by(player_name: "DeMarre Carroll").update_attributes(players_image:"http://www.rantsports.com/nba/files/2014/03/DeMarreCarroll2.jpg")
+Player.find_by(player_name: "Jarell Eddie").update_attributes(players_image:"http://media.cmgdigital.com/shared/lt/lt_cache/thumbnail/600/img/photos/2015/03/04/a2/aa/093014-hawks-CC22.jpg")
+Player.find_by(player_name: "Mike Muscala").update_attributes(players_image:"http://i.cdn.turner.com/drp/nba/hawks/sites/default/files/styles/main_gallery_photo__480_tall/public/legacy/photos/blazers5_0.jpg?itok=Ryb5aRLO")
+Player.find_by(player_name: "Dennis Schroder").update_attributes(players_image:"http://a.espncdn.com/photo/2013/1012/nba_g_schroder_gb1_800.jpg")
+Player.find_by(player_name: "Mike Scott").update_attributes(players_image:"http://www.rantsports.com/nba/files/2014/04/MikeScott.jpg")
+Player.find_by(player_name: "Shelvin Mack").update_attributes(players_image:"http://talkinhoopz.com/wp-content/uploads/2014/07/shelvinmack.jpg")
+Player.find_by(player_name: "John Jenkins").update_attributes(players_image:"http://www.foxsports.com/content/dam/fsdigital/RSN/South/2014/2/3/PI-NBA-Hawks-John-Jenkins-232014.jpg")
+
 
 # Lakers
 Player.find_by(player_name: "Jeremy Lin").update_attributes(players_image:"http://img.bleacherreport.net/img/slides/photos/003/804/930/hi-res-aab46e197f0a0849e8f5bff674b2ee9a_crop_north.jpg?w=630&h=420&q=75")
