@@ -335,7 +335,7 @@ p#selected {
 }
 
 hr#starting {
-  border: 5px dashed $main_yellow; 
+  border: 3px solid white; 
 }
 
 ul.gridsystem {
@@ -361,7 +361,7 @@ ul.gridsystem {
 
       span#player_name {
       
-        color: white; 
+        color: $main_yellow; 
         font-family: $font;  
         text-align: justify; 
         // text-justify: inter-word;
@@ -369,7 +369,7 @@ ul.gridsystem {
 
       span#player_position {
         font-size: 15px; 
-        color: white; 
+        color: $main_yellow; 
         font-family: $font; 
       }
     }
@@ -377,13 +377,8 @@ ul.gridsystem {
 }
 
 hr#hrtag {
-  border: 3px dashed $main_yellow; 
+  border: 3px solid $main_yellow; 
 }
-
-
-
-
-
 
 
 footer.attr-footer { 
@@ -442,5 +437,10 @@ footer.attr-footer {
             }
         }
     }
+
+}
+
+hr#between {
+  border: 3px dashed $main_yellow; 
 }
 

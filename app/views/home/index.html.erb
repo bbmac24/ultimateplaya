@@ -72,8 +72,9 @@
 
 
 <div class="main"> 
+  <div id="about"> 
 
-    <div id="about"> 
+  
       <div class="container-fluid">
         <div class="about row"> 
           <div class="col-md-2"></div> 
@@ -119,7 +120,7 @@
                 <option value="">--Select A Team--</option>
                 <option ng-repeat="team in vm.teams" value="{{team.id}}">{{team.name}}</option>
                 </select>
-                <br><br><br> 
+                <br><hr id="between"><br> 
                
 
                <p id="selected">Pick A Player</p> 
@@ -147,10 +148,10 @@
       <div class="container-fluid">
         <div class="col-md-10">
        <!--      <ul class="thumbnail"> -->
-          <ul class="animated bounceIn gridsystem" ng-repeat="player in vm.players"> 
+          <ul class="gridsystem" ng-repeat="player in vm.players"> 
           
               <li class="col-xs-2 borderthumb">
-                 <div class="thumbnail playersgrid">
+                 <div class="animated fadeIn thumbnail playersgrid">
             
                     <img ng-src="{{ player.players_image }}" class="img-rounded"><img ng-src="{{ player.team.image_url }}">
 
@@ -159,9 +160,6 @@
                   
                     <hr id="hrtag">    
                     <p><span id="player_position">{{ player.player_position }}</span></p> 
-                    
-                 
-
                   </div>  
               </li>
           </ul> 

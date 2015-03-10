@@ -78,7 +78,7 @@ Player.find_by(player_name: "Jordan Hill").update_attributes(players_image:"http
 Player.find_by(player_name: "Nick Young").update_attributes(players_image:"http://cdn.na16.netdna-cdn.com/wp-content/uploads/2014/05/nick-young-swaggy-p.jpg")
 Player.find_by(player_name: "Julius Randle").update_attributes(players_image:"http://media.kentucky.com/smedia/2014/10/29/09/22/16eP8L.AuSt.79.jpg")
 Player.find_by(player_name: "Robert Sacre").update_attributes(players_image:"http://ballislife.com/wp-content/uploads/2012/11/ts_120907robertsacre670.jpg")
-Player.find_by(player_name: "Wesley Johnson").update_attributes(players_image:"http://www3.pictures.zimbio.com/gi/Wesley+Johnson+Minnesota+Timberwolves+v+Los+Do2FlE19lAvl.jpg")
+Player.find_by(player_name: "Wesley Johnson").update_attributes(players_image:"http://cdn.fansided.com/wp-content/blogs.dir/307/files/2014/08/wesley-johnson-nba-los-angeles-lakers-phoenix-suns-850x560.jpg")
 
 
 
