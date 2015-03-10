@@ -79,6 +79,10 @@ Player.find_by(player_name: "Nick Young").update_attributes(players_image:"http:
 Player.find_by(player_name: "Julius Randle").update_attributes(players_image:"http://media.kentucky.com/smedia/2014/10/29/09/22/16eP8L.AuSt.79.jpg")
 Player.find_by(player_name: "Robert Sacre").update_attributes(players_image:"http://ballislife.com/wp-content/uploads/2012/11/ts_120907robertsacre670.jpg")
 Player.find_by(player_name: "Wesley Johnson").update_attributes(players_image:"http://cdn.fansided.com/wp-content/blogs.dir/307/files/2014/08/wesley-johnson-nba-los-angeles-lakers-phoenix-suns-850x560.jpg")
+Player.find_by(player_name: "Ryan Kelly").update_attributes(players_image:"http://cdn.fansided.com/wp-content/blogs.dir/307/files/2014/08/wesley-johnson-nba-los-angeles-lakers-phoenix-suns-850x560.jpg")
+Player.find_by(player_name: "Tarik Black").update_attributes(players_image:"http://img.bleacherreport.net/img/images/photos/003/240/638/hi-res-6a45b7e97945305f0f1fea765b7374fb_crop_north.jpg?w=630&h=420&q=75")
+Player.find_by(player_name: "Jordan Clarkson").update_attributes(players_image:"http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2528426.png&w=350&h=254")
+Player.find_by(player_name: "Ed Davis").update_attributes(players_image:"http://www.trbimg.com/img-5452e461/turbine/la-sp-ln-lakers-ed-davis-bright-spot--20141030")
 
 
 
