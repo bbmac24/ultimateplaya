@@ -1,16 +1,17 @@
 
 
 <header> 
-
-    <h1>got what it takes</h1> 
-    <h1 class="animated1 bounceInDown"> to be a <span>REAL PLAYA?</span></h1> 
-    <h2 class="animated6 bounceInDown"> WELCOME TO </h2> 
+  
+  <h1>got what it takes</h1> 
+  
+  <h1 class="animated1 bounceInDown"> to be a <span>REAL PLAYA?</span></h1> 
+  <h2 class="animated6 bounceInDown"> WELCOME TO </h2> 
     
     <div class="logo">  
-    <img class="animated7 bounceInDown logo" src="<%= asset_path('ultimateplaya.svg') %>" alt="ultimateplayer">  
+      <img class="animated7 bounceInDown logo" src="<%= asset_path('ultimateplaya.svg') %>" alt="ultimateplayer">  
     </div> 
 
-    <h3 class="animated7 bounceInDown guide"> your <span>#1</span>  guide to <span>NBA fantasy teams</span> </h3> 
+  <h3 class="animated7 bounceInDown guide"> your <span>#1</span> guide to<span>NBA fantasy teams</span> </h3> 
 
     <div id="playa1"> 
       <img class="animated2 bounceInLeft playa1" src="<%= asset_path('playa1.png') %>"alt="playa1"> 
@@ -20,11 +21,11 @@
       <img class="animated3 bounceInLeft playa2" src="<%= asset_path('player2.png') %>"alt="playa2"> 
     </div> 
 
-      <div id="playa3"> 
+    <div id="playa3"> 
       <img class="animated4 bounceInRight playa3" src="<%= asset_path('player4.png') %>"alt="playa3"> 
     </div> 
 
-      <div id="playa4"> 
+    <div id="playa4"> 
       <img class="animated5 bounceInRight playa4" src="<%= asset_path('player5.png') %>"alt="playa4"> 
     </div> 
 
@@ -145,57 +146,44 @@
 
               <% end %>
         </div> 
+
       <div class="container-fluid">
         <div class="col-md-10">
        <!--      <ul class="thumbnail"> -->
           <ul class="gridsystem" ng-repeat="player in vm.players"> 
-          
-              <li class="col-xs-2 borderthumb">
-                 <div class="animated fadeIn thumbnail playersgrid">
+            <li class="col-xs-2 borderthumb">
+              <div class="animated fadeIn thumbnail playersgrid">
             
-                    <img ng-src="{{ player.players_image }}" class="img-rounded"><img ng-src="{{ player.team.image_url }}">
-
+                <img ng-src="{{ player.players_image }}" class="img-rounded"><img ng-src="{{ player.team.image_url }}">
+                <span id="player_name">{{ player.player_name }}</span> 
+                <hr id="hrtag">    
+                <p><span id="player_position">{{ player.player_position }}</span> 
                   
-                    <span id="player_name">{{ player.player_name }}</span> 
-                  
-                    <hr id="hrtag">    
-                    <p><span id="player_position">{{ player.player_position }}</span></p> 
-                  </div>  
-              </li>
+              </div>  
+            </li>
           </ul> 
         </div>  
       </div>  
   
         </div> 
-
       </div>
     </div> 
   </div> 
 </div>  
 
+<footer class="text-center attr-footer"> 
 
-
-
-
-
-  <footer class="text-center attr-footer"> 
-
-    <div class="left-side"> 
+   <div class="left-side"> 
       WDI Project 4 - © BenSam, 2015
-
-        <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
-
-        <a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"><img src="/linkedin.png" class="linkedin"></a>
-
-        <a href="https://github.com/bbmac24"><img src="githubicon.png" class="github"></a>
+      <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
+      <a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"><img src="/linkedin.png" class="linkedin"></a>
+      <a href="https://github.com/bbmac24"><img src="githubicon.png" class="github"></a>
     </div> 
 
-    <div class="right-side"> 
-
+   <div class="right-side"> 
       POWERED BY: &nbsp; 
-
-        <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
+      <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
     </div> 
 
-  </footer> 
+</footer> 
 

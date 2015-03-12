@@ -9,9 +9,11 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
+      flash[:info] = "Welcome to Ultimate Players!"
       redirect_to root_path
     else
-      render :new
+      flash[:danger] = "Incorrect Information!"
+      redirect_to root_path
     end
   end
 end
