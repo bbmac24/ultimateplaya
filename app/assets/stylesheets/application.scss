@@ -381,6 +381,66 @@ hr#hrtag {
 }
 
 
+footer.attr-footer2 { 
+  height: 50px;
+  z-index: 150; 
+  font-family: $font2; 
+  position: relative; 
+  bottom: 0; 
+
+
+  padding-top: 8px; 
+  background-color: green; 
+  border-top: 10px solid $main_yellow; 
+  
+
+    div.left-side {
+      color: white; 
+      font-size: 13px; 
+      float: left;
+      padding-left: 50px;  
+
+        a {
+          display: inline-block;
+          padding-left: 1px; 
+          padding-right: 1px; 
+
+            img.facebook {
+              width: 15px;
+            }
+
+            img.linkedin {
+              width: 15px; 
+            }
+
+            img.github {
+              width: 15px; 
+            }
+        }
+    }
+
+    div.right-side {
+      color: white;
+      font-size: 13px; 
+      float: right;
+      padding-right: 50px; 
+      vertical-align: middle; 
+
+        a {
+          display: inline-block; 
+          padding-left: 3px; 
+          padding-right: 3px; 
+
+            img.sportsdata {
+              width: 22px;
+
+            }
+        }
+    }
+
+}
+
+
 footer.attr-footer { 
   height: 50px;
   z-index: 150; 
@@ -444,3 +504,50 @@ hr#between {
   border: 3px dashed $main_yellow; 
 }
 
+.modal-title {
+  text-align: center; 
+}
+
+// #signupModal {
+//   background: url("http://forums.nba-live.com/dl_mod/thumbs/4770_nba2k13%202013-04-09%2015-34-15-02.jpg"); 
+//   background-size: cover; 
+
+// }
+#signup-button2 {
+  font-family: $font; 
+  background-color: $main_yellow; 
+}
+
+#signup-button2:hover {
+       box-shadow: 0px 0px 1px 1px $main_yellow; 
+
+  }
+
+
+#signup-button {
+  background-color: green;
+}
+
+#signup-button3 {
+  font-family: $font; 
+  background-color: $main-yellow;
+}
+
+#signup-button3:hover {
+    box-shadow: 0px 0px 1px 1px green; 
+}
+
+#signup-button4 {
+  font-family: $font; 
+  background-color: $main-yellow;
+}
+
+#signup-button4:hover {
+    box-shadow: 0px 0px 1px 1px $main-yellow; 
+}
+
+
+h4#modalfont {
+  background-color: green; 
+  border-bottom: 10px solid $main_yellow; 
+}

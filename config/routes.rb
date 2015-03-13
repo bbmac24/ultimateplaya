@@ -7,9 +7,12 @@ Rails.application.routes.draw do
   get "/api/player" => 'data#player'
 
   get "/signup" => 'users#new', as: :signup  
+  post '/signup' => 'users#create'
+  # post '/signup' => 'users@create'
   # resources :users
-  post '/users' => 'users#create', as: :users
-  post '/login' => 'sessions#create', as: :login
+  # post '/users' => 'users#create', as: :users
+  get '/login' => 'sessions#new', as: :login
+  post '/login' => 'sessions#create'
   get "/logout" => 'sessions#destroy', as: :logout
 
 

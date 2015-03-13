@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       flash[:info] = "Welcome to Ultimate Players!"
       redirect_to root_path
     else
-      flash[:danger] = "Incorrect Information!"
+      flash[:danger] = "Incorrect signup!"
       redirect_to root_path
     end
   end

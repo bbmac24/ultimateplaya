@@ -44,6 +44,17 @@
               <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#startingfive">STARTING-FIVE</a></li> 
             </ul> 
         </div> 
+<!-- 
+          <% flash.each do |key, value| %>
+        
+            <div class="alert alert-<%= key %>" role="alert">
+            <%# value.each do |v| %>
+              <%= value %><br>
+               <%# end %>
+            </div>
+        
+        <% end %> -->
+
       
         <div id="rightnav">
             <% if current_user  %>
@@ -63,14 +74,28 @@
         
               <li class="signin">  <%= f.text_field :username, placeholder: 'username',class: 'form-control' %> </li> 
               <li> <%= f.password_field :password, placeholder: 'password', class: 'form-control'%> </li> 
-              <li> <%= f.submit 'LOGIN', class: 'btn btn-primary' %></li> 
+              <li> <%= f.submit 'LOGIN', class: 'btn btn-primary', id: 'signup-button2' %></li> 
             <% end %>
           <% end %>
         </div> 
 
 
     </nav>
-
+<!-- 
+ <div class="flash-messages">
+      <div class="fade-flash-messages">
+        <% flash.each do |key, value| %>
+        
+            <div class="alert alert-<%= key %>" role="alert">
+            <%# value.each do |v| %>
+              <%= value %><br>
+               <%# end %>
+            </div>
+        
+        <% end %>
+      </div>
+</div>
+ -->
 
 <div class="main"> 
   <div id="about"> 
@@ -94,7 +119,10 @@
                         It's a fast and easy way to manage all your NBA stats all in one place. 
                         </p> 
 
-                     <p class="aboutsignup"> <%= link_to "signup", signup_path, class: 'aboutsignup'  %> & get started!</p>
+
+                    <p class="aboutsignup"><a href="#signupModal" data-toggle="modal" data-target="#signupModal"> Signup </a>  & get started! </p>
+<!-- 
+                     <p class="aboutsignup"> <%= link_to "signup", signup_path, class: 'aboutsignup'  %> & get started!</p> -->
                 </div> 
             </div> 
           </div> 
@@ -103,6 +131,7 @@
 
 
   <div id="startingfive"> 
+
     <br> <br> <br> 
     <div class="container-fluid"> 
       <div class="startingfive row">
@@ -171,19 +200,71 @@
   </div> 
 </div>  
 
+<div class="modal fade" id="signupModal">
+    <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+         <h4 id="modalfont" class="modal-title"> signup </h4>
+         </div>
+           <div class="modal-body">
+
+              <%= form_for :user, url: '/signup' do |f| %> 
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <%= f.text_field :username, placeholder: 'Choose a username', class: "form-control", required: true %>
+                </div>  
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <%= f.text_field :email, placeholder: 'Enter your email address', class: "form-control", required: true %>
+                </div> 
+                 <div class="form-group">
+                  <label for="password">Password</label>
+                  <%= f.password_field :password, placeholder: 'Choose a password (at least 6 characters)', class: "form-control", required: true %>
+                </div>  
+                <div class="form-group">
+                  <label for="password_confirmation">Password Confirmation</label>
+                  <%= f.password_field :password_confirmation, placeholder: 'Enter your password once more', class: "form-control", required: true %>
+                </div>  
+                 <div class="modal-footer">
+
+                <a href="#" data-dismiss="modal" class="btn btn-primary" id="signup-button3">Close</a>
+                <%= f.submit "Join", class: "btn btn-primary", id: "signup-button3" %>
+              </div>
+              <% end %>
+
+
+              <footer class="text-center attr-footer2"> 
+
+                 <div class="left-side"> 
+                    WDI Project 4 - © BenSam, 2015
+                    <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
+                    <a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"><img src="/linkedin.png" class="linkedin"></a>
+                    <a href="https://github.com/bbmac24"><img src="githubicon.png" class="github"></a>
+                  </div> 
+
+                 <div class="right-side"> 
+                    POWERED BY: &nbsp; 
+                    <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
+                  </div> 
+
+              </footer> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+
 <footer class="text-center attr-footer"> 
 
-   <div class="left-side"> 
-      WDI Project 4 - © BenSam, 2015
-      <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
-      <a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"><img src="/linkedin.png" class="linkedin"></a>
-      <a href="https://github.com/bbmac24"><img src="githubicon.png" class="github"></a>
-    </div> 
+  <div class="left-side"> 
+    WDI Project 4 - © BenSam, 2015
+  <a href="https://www.facebook.com/ben.sam.370"><img src="/facebookicon.png" class="facebook"></a>
+    <a href="www.linkedin.com/pub/ben-samansareesak/a8/789/777/en"><img src="/linkedin.png" class="linkedin"></a>
+  <a href="https://github.com/bbmac24"><img src="githubicon.png" class="github"></a>
+  </div> 
 
-   <div class="right-side"> 
-      POWERED BY: &nbsp; 
-      <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
-    </div> 
+  <div class="right-side"> 
+    POWERED BY: &nbsp; 
+  <a href="http://developer.sportsdatallc.com/"><img src="/sportsdata1.png" class="sportsdata"></a>
+  </div> 
 
 </footer> 
-
