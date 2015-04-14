@@ -1,4 +1,4 @@
-# This is to get teams data
+  # This is to get teams data
 @teams_list = HTTParty.get("http://api.sportsdatallc.org/nba-t3/league/hierarchy.json?api_key=#{ENV['API_KEY']}")
 
 @conf = @teams_list.parsed_response['conferences']
@@ -93,6 +93,14 @@ Player.find_by(player_name: "Ryan Kelly").update_attributes(players_image:"http:
 Player.find_by(player_name: "Tarik Black").update_attributes(players_image:"http://img.bleacherreport.net/img/images/photos/003/240/638/hi-res-6a45b7e97945305f0f1fea765b7374fb_crop_north.jpg?w=630&h=420&q=75")
 Player.find_by(player_name: "Jordan Clarkson").update_attributes(players_image:"http://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2528426.png&w=350&h=254")
 Player.find_by(player_name: "Ed Davis").update_attributes(players_image:"http://www.trbimg.com/img-5452e461/turbine/la-sp-ln-lakers-ed-davis-bright-spot--20141030")
+
+#Warriors
+Player.find_by(player_name: "Justin Holiday").update_attributes(players_image:"http://cdn.fansided.com/wp-content/blogs.dir/41/files/2015/01/justin-holiday-nba-oklahoma-city-thunder-golden-state-warriors-850x560.jpg")
+Player.find_by(player_name: "Stephyen Curry").update_attributes(players_image:"http://usatthebiglead.files.wordpress.com/2012/09/stephen-curry-warriors-playoff-bound.jpg")
+Player.find_by(player_name: "Andrew Bogut").update_attributes(players_image:"http://www.gannett-cdn.com/-mm-/86e24fba67aa01f0c7d2c60fe0d3969d018c7dda/c=0-49-2589-1997&r=x404&c=534x401/local/-/media/USATODAY/test/2013/10/26/1382765786000-USP-NBA-Preseason-Golden-State-Warriors-at-Utah-J.jpg")
+Player.find_by(player_name: "Klay Thompson").update_attributes(players_image:"http://i.cdn.turner.com/drp/nba/warriors/sites/default/files/styles/story_main_photo/public/20141103_klay_pow_760.jpg?itok=qQwtYZ-H")
+Player.find_by(player_name: "David Lee").update_attributes(players_image:"http://www.sfexaminer.com/imager/david-lee-of-the-golden-state-warriors-has-been-named-to-the-all-nba-third/b/original/2349707/8f1c/Warriors_David_Lee.jpg")
+Player.find_by(player_name: "Draymond Green").update_attributes(players_image:"http://isportsweb.com/wp-content/uploads//2014/10/draymondgreen.jpg")
 
 
 

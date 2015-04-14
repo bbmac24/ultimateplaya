@@ -530,11 +530,11 @@ hr#between {
 
 #signup-button3 {
   font-family: $font; 
-  background-color: $main-yellow;
+  background-color: green;
 }
 
 #signup-button3:hover {
-    box-shadow: 0px 0px 1px 1px green; 
+    box-shadow: 0px 0px 1px 1px $main_yellow; 
 }
 
 #signup-button4 {
