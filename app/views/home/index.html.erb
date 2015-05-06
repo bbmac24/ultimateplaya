@@ -44,19 +44,8 @@
               <li><a data-scroll data-options='{ "speed": 1500, "easing": "easeInOutQuad" }' href="#startingfive">STARTING-FIVE</a></li> 
             </ul> 
         </div> 
-<!-- 
-          <% flash.each do |key, value| %>
-        
-            <div class="alert alert-<%= key %>" role="alert">
-            <%# value.each do |v| %>
-              <%= value %><br>
-               <%# end %>
-            </div>
-        
-        <% end %> -->
-
       
-        <div id="rightnav">
+      <div id="rightnav">
             <% if current_user  %>
            <span id="currentuser"><%= current_user.username %></span> 
 
@@ -81,22 +70,7 @@
 
 
     </nav>
-<!-- 
- <div class="flash-messages">
-      <div class="fade-flash-messages">
-        <% flash.each do |key, value| %>
-        
-            <div class="alert alert-<%= key %>" role="alert">
-            <%# value.each do |v| %>
-              <%= value %><br>
-               <%# end %>
-            </div>
-        
-        <% end %>
-      </div>
-</div>
- -->
-
+<!-- This is the about page section -->
 <div class="main"> 
   <div id="about"> 
 
@@ -178,7 +152,7 @@
 
       <div class="container-fluid">
         <div class="col-md-10">
-       <!--      <ul class="thumbnail"> -->
+     
           <ul class="gridsystem" ng-repeat="player in vm.players"> 
             <li class="col-xs-2 borderthumb">
               <div class="animated fadeIn thumbnail playersgrid">

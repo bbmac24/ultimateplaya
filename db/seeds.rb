@@ -13,9 +13,7 @@ end
 
 #to loop the information
 Team.all.each do |team|
-
-  p "Grabbing players for #{team['name']}}"
-
+  
   team_data = HTTParty.get("http://api.sportsdatallc.org/nba-t3/teams/#{team.team_id}/profile.json?api_key=#{ENV['API_KEY']}")
 
   if team_data['players'].present?
